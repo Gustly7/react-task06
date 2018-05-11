@@ -10,7 +10,7 @@ class Film extends Component {
   render () {
     if (window['sessionStorage'] === undefined) { window['sessionStorage'] = {} }
 
-    if (window['sessionStorage']['searchText'] === undefined) { window['sessionStorage']['searchText'] = '' }
+    if (window['sessionStorage']['searchText'] === undefined) { window['sessionStorage']['searchText'] = ' ' }
 
     if (window['sessionStorage']['searchText'] === '') {
       throw new Error('Пустой поиск!')
