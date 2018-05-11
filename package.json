@@ -1,0 +1,55 @@
+{
+  "name": "task04",
+  "version": "1.0.0",
+  "repository": "https://github.com/freeusoft/react-training/tree/master/task3",
+  "author": "Valentin Perov",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "prod": "webpack --mode=production",
+    "test": "jest",
+    "dev": "webpack-dev-server",
+    "e2e": "protractor protractor.conf.js",
+	"web": "webdriver-manager start"
+  },
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-eslint": "^8.2.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.1.1",
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^4.0.0",
+    "standard-loader": "^6.0.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.15"
+  },
+  "devDependencies": {
+    "babel-jest": "^22.4.3",
+    "cross-env": "^5.1.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.3",
+    "mini-css-extract-plugin": "^0.4.0",
+    "protractor": "^5.3.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.3.2",
+    "standard": "^11.0.1"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js",
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
+      "\\.(jpg|gif|ttf|eot|svg)$": "<rootDir>/src/__mocks__/fileMock.js"
+    }
+  }
+}
