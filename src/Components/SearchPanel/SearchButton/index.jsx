@@ -1,18 +1,27 @@
 import React, { Component } from 'react'
+import * as filmApi from '../../../api/film-api'
+import { connect } from 'react-redux'
 
 class Index extends Component {
   searchByClick () {
-    sessionStorage.searchText = document.getElementById('inputSearch').value
-    window.location.reload()
+    filmApi.searchFilms(this.props.searchString, this.props.searchType)
   }
 
   render () {
     return (
       <div className='SearchButton'>
-        <button id='SearchButton' className='submit btn btn-primary btn-lg' onClick={this.searchByClick}>SEARCH</button>
+        <button id='SearchButton' className='submit btn btn-primary btn-lg' onClick={this.searchByClick.bind(this)}>SEARCH</button>
       </div>
     )
   }
 }
 
-export default Index
+function mapStateToProps (store) {
+  return {
+    searchString: store.filmState.searchString,
+    searchType: store.filmState.searchType
+  }
+}
+
+// export default Index
+export default connect(mapStateToProps)(Index)

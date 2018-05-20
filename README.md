@@ -1,11 +1,12 @@
-Task4 (Testing lecture)
+Task 5 (Flux + Redux)
 
-Coverage > 60%
-Write tests using enzyme and jest
-Use snapshot testing
-Use coverage tool
-Write at least one e2e test using library from the list:
-Cypress, CasperJS, Protractor, Nightwatch, Webdriver
+Go through API docs in swagger: http://react-cdp-api.herokuapp.com/api-docs 
+API Endpoint: http://react-cdp-api.herokuapp.com/ 
+Make your components perform real AJAX requests.
+Move data fetches to actions and pass data to your components with redux.
+Cover actions and reducers with unit tests.
+Add the ability to store your apps state offline and use it to start-up the app. You can take a look at redux-persist library for further reference.
+
 
 Evaluation criteria:
 ( each mark includes previous mark criteria )
@@ -19,11 +20,10 @@ Evaluation criteria:
 <td bgcolor=gray>5</td>
 </tr>
 <tr>
-<td>Coverage > 60%</td>
-<td>Use snapshot testing</td>
-<td>Coverage > 80% Functional testing with enzyme and jest
-</td>
-<td>write at least one e2e test</td>
+<td>All data fetches moved to actions & received from store by components</td>
+<td>Filtering and sorting is done as redux actions</td>
+<td>Actions and reducers covered with unit tests (~60%+, can be amended by mentor)</td>
+<td>Offline data storage & store restoration (coverage ~100%)</td>
 </tr>
 </tbody>
 </table>

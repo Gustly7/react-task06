@@ -9,14 +9,14 @@ describe('Film component test suite', () => {
 
   test('Film snapshot renders correctly', () => {
     const tree = renderer.create(
-      <Film />
+      <Film films={{poster_path: '', release_date: '2000'}} />
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   test('Film div should have poster, year, genre and name', () => {
     const wrapper = mount(
-      <Film />
+      <Film films={{poster_path: '', release_date: '2000'}} />
     )
     const elem = wrapper.find('div.Poster')
     expect(elem.length).toBe(1)

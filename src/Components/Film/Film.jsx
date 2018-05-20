@@ -3,7 +3,6 @@ import Poster from './Poster/index'
 import FilmName from './FilmName/index'
 import FilmYear from './FilmYear/index'
 import FilmGenre from './FilmGenre/index'
-import posterImg from '../../Images/Posters/KillBillVol1_poster.jpg'
 import './Film.css'
 
 class Film extends Component {
@@ -15,25 +14,26 @@ class Film extends Component {
     if (window['sessionStorage']['searchText'] === '') {
       throw new Error('Пустой поиск!')
     }
+    console.log(this.props.films)
     return (
       <div className='Film'>
         <div className='container'>
           <div className='row'>
             <div className='col'>
-              <Poster link={posterImg} />
+              <Poster link={this.props.films.poster_path} />
             </div>
           </div>
           <div className='row'>
             <div className='col'>
-              <FilmName filmName={this.props.filmName} />
+              <FilmName filmName={this.props.films.title} />
             </div>
             <div className='col'>
-              <FilmYear filmYear={this.props.filmYear} />
+              <FilmYear filmYear={this.props.films.release_date} />
             </div>
           </div>
           <div className='row'>
             <div className='col'>
-              <FilmGenre filmGenre={this.props.filmGenre} />
+              <FilmGenre filmGenre={this.props.films.genres} />
             </div>
           </div>
         </div>

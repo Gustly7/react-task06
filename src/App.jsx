@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import store from './store'
+import { Provider } from 'react-redux'
 import FilmList from './Components/FilmList/'
 import FilmErrorBoundary from './Components/FilmErrorBoundary'
 import MainErrorBoundary from './Components/MainErrorBoundary'
@@ -9,15 +11,17 @@ import Footer from './Components/Footer/index'
 class App extends Component {
   render () {
     return (
-      <MainErrorBoundary>
-        <div className='App'>
-          <SearchPanel />
-          <FilmErrorBoundary>
-            <FilmList />
-          </FilmErrorBoundary>
-          <Footer />
-        </div>
-      </MainErrorBoundary>
+      <Provider store={store}>
+        <MainErrorBoundary>
+          <div className='App'>
+            <SearchPanel />
+            <FilmErrorBoundary>
+              <FilmList />
+            </FilmErrorBoundary>
+            <Footer />
+          </div>
+        </MainErrorBoundary>
+      </Provider>
     )
   }
 }

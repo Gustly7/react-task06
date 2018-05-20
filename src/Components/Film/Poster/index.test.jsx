@@ -6,7 +6,7 @@ import renderer from 'react-test-renderer'
 describe('Poster component test suite', () => {
   test('Poster snapshot renders correctly', () => {
     const tree = renderer.create(
-      <Poster />
+      <Poster films={{poster_path: ''}} />
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })

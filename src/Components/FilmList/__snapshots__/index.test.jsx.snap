@@ -5,236 +5,65 @@ exports[`FilmList component test suite FilmList snapshot renders correctly 1`] =
   className="container filmList"
 >
   <div
-    className="Film"
+    className="data-list-item"
   >
     <div
-      className="container"
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="Poster"
-          >
-            <img
-              alt={undefined}
-              src="test-file-stub"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmName"
-          >
-            Kill Bill vol. 1
-          </div>
-        </div>
-        <div
-          className="col"
-        >
-          <div
-            className="FilmYear"
-          >
-            2003
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmGenre"
-          >
-            Action & Adventure
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Film"
-  >
+      className="details"
+    />
     <div
-      className="container"
+      className="Film"
     >
       <div
-        className="row"
+        className="container"
       >
         <div
-          className="col"
+          className="row"
         >
           <div
-            className="Poster"
+            className="col"
           >
-            <img
-              alt={undefined}
-              src="test-file-stub"
+            <div
+              className="Poster"
+            >
+              <img
+                alt={undefined}
+                src="https://images-na.ssl-images-amazon.com/images/I/41qSUP7S3XL._AC_UL320_SR228,320_.jpg"
+              />
+            </div>
+          </div>
+        </div>
+        <div
+          className="row"
+        >
+          <div
+            className="col"
+          >
+            <div
+              className="FilmName"
             />
           </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
           <div
-            className="FilmName"
+            className="col"
           >
-            Kill Bill vol. 2
+            <div
+              className="FilmYear"
+            >
+              01-0
+            </div>
           </div>
         </div>
         <div
-          className="col"
+          className="row"
         >
           <div
-            className="FilmYear"
+            className="col"
           >
-            2004
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmGenre"
-          >
-            Action & Adventure
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Film"
-  >
-    <div
-      className="container"
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="Poster"
-          >
-            <img
-              alt={undefined}
-              src="test-file-stub"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmName"
-          >
-            Kill Bill vol. 3
-          </div>
-        </div>
-        <div
-          className="col"
-        >
-          <div
-            className="FilmYear"
-          >
-            2005
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmGenre"
-          >
-            Action & Adventure
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div
-    className="Film"
-  >
-    <div
-      className="container"
-    >
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="Poster"
-          >
-            <img
-              alt={undefined}
-              src="test-file-stub"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmName"
-          >
-            Kill Bill vol. 4
-          </div>
-        </div>
-        <div
-          className="col"
-        >
-          <div
-            className="FilmYear"
-          >
-            2006
-          </div>
-        </div>
-      </div>
-      <div
-        className="row"
-      >
-        <div
-          className="col"
-        >
-          <div
-            className="FilmGenre"
-          >
-            Action & Adventure
+            <div
+              className="FilmGenre"
+            >
+              Action
+              Adventure
+            </div>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import SearchButton from './SearchButton/index'
 import SearchResults from './SearchResults/index'
 import SortType from './SortType/index'
 import BGImage from './../../Images/netflixBG.jpg'
+import * as filmApi from '../../api/film-api'
 
 var SearchPanelStyle = {
   backgroundImage: 'url(' + BGImage + ')'
@@ -13,7 +14,9 @@ var SearchPanelStyle = {
 
 class SearchPanel extends React.Component {
   searchChange (event) {
-    sessionStorage.searchText = event.target.value
+    // sessionStorage.searchText = event.target.value
+    console.log('changed')
+    filmApi.setSearchString(event.target.value)
   }
 
   render () {
