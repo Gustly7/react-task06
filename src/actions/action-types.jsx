@@ -1,5 +1,6 @@
-// Users
+// Films
 export const GET_FILMS_SUCCESS = 'GET_FILMS_SUCCESS'
+export const GET_FILM_SUCCESS = 'GET_FILM_SUCCESS'
 
 // Search vars
 export const SEARCH_STRING = 'SEARCH_STRING'

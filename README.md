@@ -1,15 +1,18 @@
-Task 5 (Flux + Redux)
+Task 6 (Routing)
+Create routing for your application. 
+Link app states between each other with React router.
+By default user lands on a new page with empty results state (caption 0).
+ 
+When user clicks on a film item, redirect him to: 
+localhost/film/id
+ 
+Handle invalid URLs, display create a 404 page, where user will be redirected in case of invalid URL.
+On switching search type or sorting type you shouldn’t switch any routes. 
+When user performs a new search, you should redirect him to: 
+localhost/search/Search%20Query
+ 
+When a new user lands on the page with such URL, you should perform search and display results.
 
-Go through API docs in swagger: http://react-cdp-api.herokuapp.com/api-docs 
-API Endpoint: http://react-cdp-api.herokuapp.com/ 
-Make your components perform real AJAX requests.
-Move data fetches to actions and pass data to your components with redux.
-Cover actions and reducers with unit tests.
-Add the ability to store your apps state offline and use it to start-up the app. You can take a look at redux-persist library for further reference.
-
-
-Evaluation criteria:
-( each mark includes previous mark criteria )
 
 <table>
 <tbody>
@@ -20,10 +23,12 @@ Evaluation criteria:
 <td bgcolor=gray>5</td>
 </tr>
 <tr>
-<td>All data fetches moved to actions & received from store by components</td>
-<td>Filtering and sorting is done as redux actions</td>
-<td>Actions and reducers covered with unit tests (~60%+, can be amended by mentor)</td>
-<td>Offline data storage & store restoration (coverage ~100%)</td>
+<td>Have 2+ pages which displays on different URLs</td>
+<td>Implement displaying 404 page for all invalid URLs</td>
+<td>By default user lands on a new page with empty results state</td>
+<td>- When user performs a search on the page, change URL and show search results 
+- When new user enters the site using direct link with search parameters - show search results
+</td>
 </tr>
 </tbody>
 </table>

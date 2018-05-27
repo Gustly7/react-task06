@@ -2,6 +2,7 @@ import * as types from '../actions/action-types'
 
 const initialState = {
   films: {data: []},
+  film: {},
   searchString: '',
   searchType: 'title'
 }
@@ -10,6 +11,8 @@ const filmReducer = function (state = initialState, action) {
   switch (action.type) {
     case types.GET_FILMS_SUCCESS:
       return Object.assign({}, state, { films: action.films })
+    case types.GET_FILM_SUCCESS:
+      return Object.assign({}, state, { film: action.film })
     case types.SEARCH_STRING:
       return Object.assign({}, state, { searchString: action.searchString })
     case types.SEARCH_TYPE:

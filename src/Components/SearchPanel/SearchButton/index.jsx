@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import * as filmApi from '../../../api/film-api'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 class Index extends Component {
   searchByClick () {
@@ -10,7 +11,9 @@ class Index extends Component {
   render () {
     return (
       <div className='SearchButton'>
-        <button id='SearchButton' className='submit btn btn-primary btn-lg' onClick={this.searchByClick.bind(this)}>SEARCH</button>
+        <Link to={`/search?search=${this.props.searchString}&searchBy=${this.props.searchType}`}>
+          <button id='SearchButton' className='submit btn btn-primary btn-lg' onClick={this.searchByClick.bind(this)}>SEARCH</button>
+        </Link>
       </div>
     )
   }

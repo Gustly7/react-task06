@@ -8,7 +8,10 @@ import Film from '../Film/Film'
 
 class FilmList extends Component {
   componentDidMount () {
-    filmApi.getFilms()
+    const params = new URLSearchParams(this.props.location.search)
+    if (params.get('search') != null) {
+      filmApi.searchFilms(params.get('search'), params.get('searchBy'))
+    }
   }
 
   render () {
@@ -18,7 +21,7 @@ class FilmList extends Component {
         return (
           <div key={film.id} className='data-list-item'>
             <div className='details' />
-            <Film films={film} />
+            <Film film={film} />
           </div>
         )
       })}

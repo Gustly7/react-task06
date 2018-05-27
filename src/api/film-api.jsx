@@ -4,7 +4,8 @@ import {
   getSearchString,
   getFilmsSuccess,
   getSearchType,
-  getSort
+  getSort,
+  getFilmSuccess
 } from '../actions/film-actions'
 
 export function getFilms () {
@@ -18,6 +19,14 @@ export function searchFilms (query = '', searchType = 'title') {
   return axios.get('http://react-cdp-api.herokuapp.com/movies?search=' + query + '&searchBy=' + searchType)
     .then(response => {
       store.dispatch(getFilmsSuccess(response.data))
+    })
+}
+
+export function getFilm (pId) {
+  // return axios.get('http://react-cdp-api.herokuapp.com/movies/${pId}')
+  return axios.get('http://react-cdp-api.herokuapp.com/movies/' + pId)
+    .then(response => {
+      store.dispatch(getFilmSuccess(response.data))
     })
 }
 

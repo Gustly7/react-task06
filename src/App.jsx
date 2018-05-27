@@ -7,6 +7,9 @@ import MainErrorBoundary from './Components/MainErrorBoundary'
 import './App.css'
 import SearchPanel from './Components/SearchPanel/SearchPanel'
 import Footer from './Components/Footer/index'
+import FilmInfo from './Components/FilmInfo'
+import { Route, Switch } from 'react-router-dom'
+import NotFound from './NotFound'
 
 class App extends Component {
   render () {
@@ -16,7 +19,12 @@ class App extends Component {
           <div className='App'>
             <SearchPanel />
             <FilmErrorBoundary>
-              <FilmList />
+              <Switch>
+                <Route exact path='/' component={FilmList} />
+                <Route path='/search/:query?' component={FilmList} />
+                <Route path='/film/:id' component={FilmInfo} />
+                <Route path='*' component={NotFound} />
+              </Switch>
             </FilmErrorBoundary>
             <Footer />
           </div>

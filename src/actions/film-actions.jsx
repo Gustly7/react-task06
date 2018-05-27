@@ -7,6 +7,13 @@ export function getFilmsSuccess (films) {
   }
 }
 
+export function getFilmSuccess (film) {
+  return {
+    type: types.GET_FILM_SUCCESS,
+    film
+  }
+}
+
 export function getSearchString (searchString) {
   return {
     type: types.SEARCH_STRING,

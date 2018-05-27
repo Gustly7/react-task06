@@ -4,8 +4,13 @@ import FilmName from './FilmName/index'
 import FilmYear from './FilmYear/index'
 import FilmGenre from './FilmGenre/index'
 import './Film.css'
+import { Link } from 'react-router-dom'
 
 class Film extends Component {
+  itemClickHandler () {
+    window.scrollTo(0, 0)
+  }
+
   render () {
     if (window['sessionStorage'] === undefined) { window['sessionStorage'] = {} }
 
@@ -14,30 +19,32 @@ class Film extends Component {
     if (window['sessionStorage']['searchText'] === '') {
       throw new Error('Пустой поиск!')
     }
-    console.log(this.props.films)
+    console.log(this.props.film)
     return (
-      <div className='Film'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col'>
-              <Poster link={this.props.films.poster_path} />
+      <Link to={'/film/' + this.props.film.id} onClick={() => this.itemClickHandler()} className='film-link'>
+        <div className='Film'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col'>
+                <Poster link={this.props.film.poster_path} />
+              </div>
             </div>
-          </div>
-          <div className='row'>
-            <div className='col'>
-              <FilmName filmName={this.props.films.title} />
+            <div className='row'>
+              <div className='col'>
+                <FilmName filmName={this.props.film.title} />
+              </div>
+              <div className='col'>
+                <FilmYear filmYear={this.props.film.release_date} />
+              </div>
             </div>
-            <div className='col'>
-              <FilmYear filmYear={this.props.films.release_date} />
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col'>
-              <FilmGenre filmGenre={this.props.films.genres} />
+            <div className='row'>
+              <div className='col'>
+                <FilmGenre filmGenre={this.props.film.genres.join(', ')} />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     )
   }
 }
